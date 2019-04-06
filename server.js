@@ -14,7 +14,7 @@ app.use(express.static('public'));
 
 var io = require('socket.io')(server);
 
-setInterval(update, 1000);
+setInterval(update, 5000);
 
 function update() {
 
@@ -70,7 +70,14 @@ io.sockets.on('connection',
 
 		socket.on('disconnect', function() {
 			console.log("Client has disconnected");
-			//Need to remove user from room somehow
+			for (var i = 0; i < rooms.length; i++) {
+				for (var j = 0; j < rooms[i].users.length; j++) {
+					if (socket.id == rooms[i].users[j].id) {
+						rooms[i].users.splice(j, 1);
+						rooms[i].numUsers--;
+					}
+				}
+			}
 		});
 	}
 );

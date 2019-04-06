@@ -1,19 +1,19 @@
-body{
-  background-color: grey;
-  font-family: 'Orbitron', sans-serif;
-  color: white;
-  text-decoration: none;
-  letter-spacing: 1vw;
-  position: fixed;
-  text-align: center;
+body {
+    background-color: grey;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1vw;
+    position: fixed;
+    text-align: center;
 }
 
-.box{
-  font-size: 8px;
-	font-size: 4vw;
-	width: 30vw;
-	height: 80vh;
-	position: absolute;
-	left: 24vw;
-	top: 40vh;
+.box {
+    font-size: 8px;
+    font-size: 4vw;
+    width: 30vw;
+    height: 80vh;
+    position: absolute;
+    left: 24vw;
+    top: 40vh;
 }
