@@ -4,6 +4,14 @@ var server = app.listen(8000, listen);
 
 var rooms = [];
 
+var temp = {
+	roomID: "APLANG7",
+	numUsers: 0,
+	users: [],
+	messages: []
+}
+rooms.push(temp);
+
 function listen() {
 	var host = server.address().address;
 	var port = server.address().port;
@@ -44,17 +52,7 @@ io.sockets.on('connection',
 						return;
 					}
 				}
-				var temp = {
-					roomID: data.roomID,
-					numUsers: 1,
-					users: [{
-						id: socket.id,
-						name: data.name
-					}],
-					messages: []
-				}
-				rooms.push(temp);
-				io.to(socket.id).emit('connected', {});
+				io.to(socket.id).emit('failed', {});
 			}
 		);
 

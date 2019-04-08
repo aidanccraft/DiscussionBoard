@@ -3,6 +3,8 @@ var postButton;
 var nameBox;
 var passwordBox;
 var joinButton;
+var nameP;
+var passwordP;
 
 function createPostBox() {
 	postBox = document.createElement("TEXTAREA");
@@ -16,6 +18,7 @@ function createPostButton() {
 	postButton.addEventListener("click",
 		function() {
 			sendMessage(postBox.value)
+			postBox.value = "";
 		});
 	var t = document.createTextNode("Post");
 	postButton.appendChild(t);
@@ -26,12 +29,22 @@ function createNameBox() {
 	nameBox = document.createElement("INPUT");
 	nameBox.id = "name";
 	document.body.appendChild(nameBox);
+	nameP = document.createElement("p");
+	nameP.id = "name";
+	var t = document.createTextNode("Name:");
+	nameP.appendChild(t);
+	document.body.appendChild(nameP);
 }
 
 function createPasswordBox() {
 	passwordBox = document.createElement("INPUT");
 	passwordBox.id = "password";
 	document.body.appendChild(passwordBox);
+	passwordP = document.createElement("p");
+	passwordP.id = "password";
+	var t = document.createTextNode("Room Password:");
+	passwordP.appendChild(t);
+	document.body.appendChild(passwordP);
 }
 
 function createJoinButton() {
@@ -56,10 +69,12 @@ function removePostButton() {
 
 function removeNameBox() {
 	document.body.removeChild(nameBox);
+	document.body.removeChild(nameP);
 }
 
 function removePasswordBox() {
 	document.body.removeChild(passwordBox);
+	document.body.removeChild(passwordP);
 }
 
 function removeJoinButton() {

@@ -15,6 +15,7 @@ body {
 
 p {
     right: 250px;
+    font-family: 'Verdana', sans-serif;
 }
 
 button#post {
@@ -36,9 +37,23 @@ input#name {
 input#password {
     outline: none;
     position: absolute;
-    top: 26vh;
+    top: 28vh;
     right: 35vw;
     width: 10vw;
+}
+
+p#name {
+    font-family: 'Orbitron', sans-serif;
+    position: fixed;
+    left: 44.5vw;
+    top: 18.5vh;
+}
+
+p#password {
+    font-family: 'Orbitron', sans-serif;
+    position: fixed;
+    left: 44.5vw;
+    top: 26.5vh;
 }
 
 button#join {
