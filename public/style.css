@@ -16,6 +16,7 @@ body {
 p {
     right: 250px;
     font-family: 'Verdana', sans-serif;
+    word-wrap: break-word;
 }
 
 button#post {
