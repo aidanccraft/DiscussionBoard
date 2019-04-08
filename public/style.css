@@ -1,22 +1,24 @@
 body {
-    background-color: rgb(0, 0, 25);
+    background-color: rgb(51, 51, 51);
+    background-image: linear-gradient(rgb(51, 51, 51), rgb(102, 102, 102));
     font-family: 'Orbitron', sans-serif;
     color: white;
     text-decoration: none;
     letter-spacing: 1px;
     font-size: 12px;
     position: relative;
-    border-style: solid;
-    border-width: 2vw 10vw 2vw 10vw;
-    border-color: rgb(0, 0, 25);
-    bottom: 12vw;
-    margin-top: 12vw;
+
 }
 
 p {
     right: 250px;
     font-family: 'Verdana', sans-serif;
     word-wrap: break-word;
+}
+
+button{
+  background-image: linear-gradient(rgb(230, 230, 230) , rgb(204, 204, 204));
+  border: none;
 }
 
 button#post {
@@ -30,16 +32,16 @@ button#post {
 input#name {
     outline: none;
     position: absolute;
-    top: 20vh;
-    right: 35vw;
+    top: 22vh;
+    left: 44.5vw;
     width: 10vw;
 }
 
 input#password {
     outline: none;
     position: absolute;
-    top: 28vh;
-    right: 35vw;
+    top: 30vh;
+    left: 44.5vw;
     width: 10vw;
 }
 
@@ -72,8 +74,8 @@ p#title {
 
 button#join {
     position: absolute;
-    top: 34vh;
-    right: 37vw;
+    top: 36vh;
+    left: 46vw;
     width: 6vw;
     height: 2vw;
 }
