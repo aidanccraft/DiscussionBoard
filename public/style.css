@@ -1,19 +1,63 @@
 body {
-    background-color: grey;
+    background-color: rgb(0, 0, 25);
     font-family: 'Orbitron', sans-serif;
     color: white;
     text-decoration: none;
-    letter-spacing: 1vw;
-    position: fixed;
-    text-align: center;
+    letter-spacing: 1px;
+    font-size: 12px;
+    position: relative;
+    border-style: solid;
+    border-width: 2vw 10vw 2vw 10vw;
+    border-color: rgb(0, 0, 25);
+    bottom: 12vw;
+    margin-top: 12vw;
 }
 
-.box {
-    font-size: 8px;
-    font-size: 4vw;
-    width: 30vw;
-    height: 80vh;
+p {
+    right: 250px;
+}
+
+button#post {
+    position: fixed;
+    bottom: 5vw;
+    width: 4vw;
+    height: 2vw;
+    right: 20vw;
+}
+
+input#name {
+    outline: none;
     position: absolute;
-    left: 24vw;
-    top: 40vh;
+    top: 20vh;
+    right: 35vw;
+    width: 10vw;
+}
+
+input#password {
+    outline: none;
+    position: absolute;
+    top: 26vh;
+    right: 35vw;
+    width: 10vw;
+}
+
+button#join {
+    position: absolute;
+    top: 34vh;
+    right: 37vw;
+    width: 6vw;
+    height: 2vw;
+}
+
+textarea#post {
+    width: 100vw;
+    height: 12vw;
+    resize: none;
+    position: fixed;
+    bottom: 0px;
+    left: 0vw;
+    border-style: solid;
+    border-width: 1vw 30vw 1vw 30vw;
+    border-color: rgb(20, 20, 45);
+    outline: none;
 }

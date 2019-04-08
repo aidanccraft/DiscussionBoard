@@ -35,9 +35,12 @@ io.sockets.on('connection',
 							id: socket.id,
 							name: data.name
 						};
-						io.to(socket.id).emit('messageList', {
-							messages: rooms[i].messages
-						});
+						if (rooms[i].messages.length > 0) {
+							io.to(socket.id).emit('messageList', {
+								messages: rooms[i].messages
+							});
+						}
+						io.to(socket.id).emit('connected', {});
 						return;
 					}
 				}
@@ -51,6 +54,7 @@ io.sockets.on('connection',
 					messages: []
 				}
 				rooms.push(temp);
+				io.to(socket.id).emit('connected', {});
 			}
 		);
 
