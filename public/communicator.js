@@ -30,6 +30,7 @@ socket.on('message', function(data) {
 	var node = document.createTextNode(data.message);
 	para.appendChild(node);
 	document.body.appendChild(para);
+	scroll();
 });
 
 function connect(aName, roomID) {
@@ -56,6 +57,7 @@ function parseList(data) {
 		para.appendChild(node);
 		document.body.appendChild(para);
 	}
+	scroll();
 }
 
 function sendMessage(message) {
@@ -66,4 +68,10 @@ function sendMessage(message) {
 			name: name
 		});
 	}
+}
+
+
+function scroll() {
+	var scrollingElement = document.body;
+	scrollingElement.scrollTop = scrollingElement.scrollHeight;
 }

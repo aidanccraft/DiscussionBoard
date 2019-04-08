@@ -23,12 +23,6 @@ app.use(express.static('public'));
 
 var io = require('socket.io')(server);
 
-setInterval(update, 5000);
-
-function update() {
-
-}
-
 io.sockets.on('connection',
 	function(socket) {
 

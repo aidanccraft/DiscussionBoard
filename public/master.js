@@ -1,4 +1,4 @@
 createTitleP();
 createNameBox();
 createPasswordBox();
-createJoinButton();
+createJoinButton();;
