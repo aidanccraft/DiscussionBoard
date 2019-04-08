@@ -59,8 +59,10 @@ io.sockets.on('connection',
 		);
 
 		socket.on('message', function(data) {
+			var id;
 			for (var i = 0; i < rooms.length; i++) {
 				if (data.roomID == rooms[i].roomID) {
+					id = i;
 					for (var j = 0; j < rooms[i].users.length; j++) {
 						if (socket.id == rooms[i].users[j].id) {
 							var x = rooms[i].messages.length;
@@ -69,7 +71,9 @@ io.sockets.on('connection',
 					}
 				}
 			}
-			io.sockets.emit('message', data);
+			for (var k = 0; k < rooms[id].users.length; k++) {
+				io.to(rooms[id].users[k].id).emit('message', data);
+			}
 		});
 
 		socket.on('disconnect', function() {
