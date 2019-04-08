@@ -1,0 +1,4 @@
+createTitleP();
+createNameBox();
+createPasswordBox();
+createJoinButton();;
