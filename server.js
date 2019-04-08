@@ -84,6 +84,15 @@ io.sockets.on('connection',
 					if (socket.id == rooms[i].users[j].id) {
 						rooms[i].users.splice(j, 1);
 						rooms[i].numUsers--;
+						if (rooms[i].users.length == 0) {
+							rooms[i] = {
+								roomID: "APLANG6",
+								numUsers: 0,
+								users: [],
+								messages: [],
+								names: []
+							}
+						}
 					}
 				}
 			}

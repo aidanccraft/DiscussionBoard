@@ -76,6 +76,10 @@ function removePostButton() {
 	document.body.removeChild(postButton);
 }
 
+function removeTitleP() {
+	document.body.removeChild(titleP);
+}
+
 function removeNameBox() {
 	document.body.removeChild(nameBox);
 	document.body.removeChild(nameP);

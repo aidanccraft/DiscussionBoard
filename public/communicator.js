@@ -7,6 +7,7 @@ socket = io.connect('http://localhost:8000');
 socket.on('connected', function(data) {
 	removeNameBox();
 	removePasswordBox();
+	removeTitleP();
 	removeJoinButton();
 	createPostBox();
 	createPostButton();
