@@ -5,10 +5,11 @@ var server = app.listen(8000, listen);
 var rooms = [];
 
 var temp = {
-	roomID: "APLANG7",
+	roomID: "APLANG6",
 	numUsers: 0,
 	users: [],
-	messages: []
+	messages: [],
+	names: []
 }
 rooms.push(temp);
 
@@ -45,7 +46,8 @@ io.sockets.on('connection',
 						};
 						if (rooms[i].messages.length > 0) {
 							io.to(socket.id).emit('messageList', {
-								messages: rooms[i].messages
+								messages: rooms[i].messages,
+								names: rooms[i].names
 							});
 						}
 						io.to(socket.id).emit('connected', {});
@@ -64,7 +66,8 @@ io.sockets.on('connection',
 					for (var j = 0; j < rooms[i].users.length; j++) {
 						if (socket.id == rooms[i].users[j].id) {
 							var x = rooms[i].messages.length;
-							rooms[i].messages[x] = rooms[i].users[j].name + ": " + data.message;
+							rooms[i].messages[x] = data.message;
+							rooms[i].names[x] = rooms[i].users[j].name + ": ";
 						}
 					}
 				}

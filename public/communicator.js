@@ -22,7 +22,11 @@ socket.on('messageList', function(data) {
 
 socket.on('message', function(data) {
 	var para = document.createElement("p");
-	var node = document.createTextNode(data.name + ": " + data.message);
+	var x = document.createElement("SPAN");
+	var t = document.createTextNode(data.name + ": ");
+	x.appendChild(t);
+	para.appendChild(x);
+	var node = document.createTextNode(data.message);
 	para.appendChild(node);
 	document.body.appendChild(para);
 });
@@ -43,6 +47,10 @@ function connect(aName, roomID) {
 function parseList(data) {
 	for (var i = 0; i < data.messages.length; i++) {
 		var para = document.createElement("p");
+		var x = document.createElement("SPAN");
+		var t = document.createTextNode(data.names[i]);
+		x.appendChild(t);
+		para.appendChild(x);
 		var node = document.createTextNode(data.messages[i]);
 		para.appendChild(node);
 		document.body.appendChild(para);

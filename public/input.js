@@ -5,6 +5,7 @@ var passwordBox;
 var joinButton;
 var nameP;
 var passwordP;
+var titleP;
 
 function createPostBox() {
 	postBox = document.createElement("TEXTAREA");
@@ -23,6 +24,14 @@ function createPostButton() {
 	var t = document.createTextNode("Post");
 	postButton.appendChild(t);
 	document.body.appendChild(postButton);
+}
+
+function createTitleP() {
+	titleP = document.createElement("p");
+	titleP.id = "title";
+	var t = document.createTextNode("APLANG 6 Discussion");
+	titleP.appendChild(t);
+	document.body.appendChild(titleP);
 }
 
 function createNameBox() {

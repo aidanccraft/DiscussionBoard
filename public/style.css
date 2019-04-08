@@ -49,11 +49,24 @@ p#name {
     top: 18.5vh;
 }
 
+span {
+    color: rgb(0, 255, 0);
+}
+
 p#password {
     font-family: 'Orbitron', sans-serif;
     position: fixed;
     left: 44.5vw;
     top: 26.5vh;
+}
+
+p#title {
+    font-family: 'Orbitron', sans-serif;
+    position: fixed;
+    left: 20vw;
+    top: -10vh;
+    margin-right: -10vw;
+    font-size: 5vw;
 }
 
 button#join {
