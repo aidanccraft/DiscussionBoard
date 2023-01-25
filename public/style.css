@@ -4,13 +4,13 @@ body {
     color: white;
     text-decoration: none;
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 1vw;
     position: relative;
     border-style: solid;
-    border-width: 2vw 10vw 2vw 10vw;
+    border-width: 2vh 10vw 2vh 10vw;
     border-color: rgb(0, 0, 25);
-    bottom: 12vw;
-    margin-top: 12vw;
+    bottom: 20vh;
+    margin-top: 20vh;
 }
 
 p {
@@ -21,16 +21,16 @@ p {
 
 button#post {
     position: fixed;
-    bottom: 5vw;
+    bottom: 8vh;
     width: 4vw;
-    height: 2vw;
-    right: 20vw;
+    height: 4vh;
+    right: 25vw;
 }
 
 input#name {
     outline: none;
     position: absolute;
-    top: 20vh;
+    top: 21vh;
     right: 35vw;
     width: 10vw;
 }
@@ -50,43 +50,39 @@ p#name {
     top: 18.5vh;
 }
 
-span {
-    color: rgb(0, 255, 0);
-}
-
 p#password {
     font-family: 'Orbitron', sans-serif;
     position: fixed;
     left: 44.5vw;
-    top: 26.5vh;
+    top: 25.5vh;
 }
 
 p#title {
     font-family: 'Orbitron', sans-serif;
     position: fixed;
-    left: 20vw;
-    top: -10vh;
+    left: 17vw;
+    top: -5vh;
     margin-right: -10vw;
     font-size: 5vw;
 }
 
 button#join {
     position: absolute;
-    top: 34vh;
+    top: 33vh;
     right: 37vw;
     width: 6vw;
-    height: 2vw;
+    height: 4vh;
 }
 
 textarea#post {
     width: 100vw;
-    height: 12vw;
+    height: 20vh;
     resize: none;
     position: fixed;
     bottom: 0px;
     left: 0vw;
     border-style: solid;
-    border-width: 1vw 30vw 1vw 30vw;
+    border-width: 3vh 30vw 3vh 30vw;
     border-color: rgb(20, 20, 45);
     outline: none;
 }

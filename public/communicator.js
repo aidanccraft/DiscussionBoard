@@ -1,10 +1,16 @@
 var socket;
 var room;
 var name;
+var color;
 
 socket = io.connect('http://localhost:8000');
+createTitleP();
+createNameBox();
+createPasswordBox();
+createJoinButton();
 
-socket.on('connected', function(data) {
+socket.on('connected', function (data) {
+	color = data.color;
 	removeNameBox();
 	removePasswordBox();
 	removeTitleP();
@@ -13,17 +19,19 @@ socket.on('connected', function(data) {
 	createPostButton();
 });
 
-socket.on('failed', function(data) {
+socket.on('failed', function (data) {
 	alert("Incorrect Password!");
 })
 
-socket.on('messageList', function(data) {
+socket.on('messageList', function (data) {
 	parseList(data)
 });
 
-socket.on('message', function(data) {
+socket.on('message', function (data) {
 	var para = document.createElement("p");
 	var x = document.createElement("SPAN");
+	x.id = "color";
+	x.style.color = data.color;
 	var t = document.createTextNode(data.name + ": ");
 	x.appendChild(t);
 	para.appendChild(x);
@@ -50,6 +58,8 @@ function parseList(data) {
 	for (var i = 0; i < data.messages.length; i++) {
 		var para = document.createElement("p");
 		var x = document.createElement("SPAN");
+		x.id = "color";
+		x.style.color = data.colors[i];
 		var t = document.createTextNode(data.names[i]);
 		x.appendChild(t);
 		para.appendChild(x);
@@ -65,7 +75,8 @@ function sendMessage(message) {
 		socket.emit('message', {
 			message: message,
 			roomID: room,
-			name: name
+			name: name,
+			color: color
 		});
 	}
 }

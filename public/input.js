@@ -10,6 +10,7 @@ var titleP;
 function createPostBox() {
 	postBox = document.createElement("TEXTAREA");
 	postBox.id = "post";
+	postBox.setAttribute("data-enable-grammarly", "false");
 	document.body.appendChild(postBox);
 }
 
@@ -17,7 +18,7 @@ function createPostButton() {
 	postButton = document.createElement("BUTTON");
 	postButton.id = "post";
 	postButton.addEventListener("click",
-		function() {
+		function () {
 			sendMessage(postBox.value)
 			postBox.value = "";
 		});
@@ -29,7 +30,7 @@ function createPostButton() {
 function createTitleP() {
 	titleP = document.createElement("p");
 	titleP.id = "title";
-	var t = document.createTextNode("APLANG 6 Discussion");
+	var t = document.createTextNode("DISCUSSION BOARD");
 	titleP.appendChild(t);
 	document.body.appendChild(titleP);
 }
@@ -60,7 +61,7 @@ function createJoinButton() {
 	joinButton = document.createElement("BUTTON");
 	joinButton.id = "join";
 	joinButton.addEventListener("click",
-		function() {
+		function () {
 			connect(nameBox.value, passwordBox.value);
 		});
 	var t = document.createTextNode("Join");
