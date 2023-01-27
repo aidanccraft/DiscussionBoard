@@ -7,7 +7,7 @@ This website works by allowing users into open rooms based off of the password t
 The website can be run by calling ```node server.js``` from the root directory. It is currently setup to be used on localhost only.
 
 ## Project Details
-This project was created using Node.js and server.IO.
+This project was done in April 2019. It was created using Node.js and server.IO.
 
 ## Future Features
 In the future, the ability to create new rooms should be available from the website itself rather than having to do so in server.js. Adding the option for enhanced messages (italics and bold font, images, replies, etc.) would also make the website more usable overall. Setting the website up to be run from an external website, rather than locally, would also help to make it more functional if it were to be used by a large group.
