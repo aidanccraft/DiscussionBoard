@@ -1,5 +1,5 @@
 # Discussion Board
-This discussion board was created to be used in a seminar class by <a href=https://github.com/AstrosBoy15>@AstrosBoy15</a>. <a href=https://github.com/Elitearcanist>@Elitearcanist</a> and <a href=https://github.com/pie-tras>@pie-tras</a> provided some help on the websites visuals.
+This discussion board was created to be used in a seminar class by <a href=https://github.com/aidanccraft>@aidanccraft</a>. <a href=https://github.com/Elitearcanist>@Elitearcanist</a> and <a href=https://github.com/pie-tras>@pie-tras</a> provided some help on the websites visuals.
 
 This website works by allowing users into open rooms based off of the password they input. When they join a room they will be able to see all previously sent messages and they can send messages to the rest of the room. A room will reset when it has no occupants remaining in it.
 
